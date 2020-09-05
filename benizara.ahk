@@ -437,7 +437,9 @@ gOyaLUp:
 		}
 		else if(g_KeyInPtn="M" || g_KeyInPtn="RMr" || g_KeyInPtn="LMl")
 		{
-			; 何もしない
+			if(IME_GetConverting() = 0) {
+				IME_SET(0)
+			}
 		}
 		g_OyaLDown := 0
 	}
